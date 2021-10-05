@@ -1,85 +1,80 @@
 /* checkboxes */
 /* credit https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.rel {
+  position: relative;
+}
 fieldset {
   border: none;
   position: relative;
   padding: 0;
+  width: 30rem;
 }
 fieldset legend {    
   font-size: 0;
   position: absolute;
-  left: 50%;
-  width: 20%;
-  right: 0;
-  /* !add media query for larger screens */
-}
-#repeat-legend {
-  height: 4.6rem;
-}
-#timer-score-legend {
-  height: 7.2rem
+  height: 4.45rem;
+  width: 100%;
 }
 .checkbox-hack {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 18rem;
   margin: .5rem auto;
-  line-height: 1.1rem;
+  /* line-height: 1.5 * label font-size */
+  line-height: 1.725rem;
 }
 .checkbox-hack label {
+  margin: 0 .5rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .checkbox-hack input {
-  visibility: hidden;
-  height: 1rem;
-  width: 1rem;
+  /* visibility: hidden; */
+  margin: 0;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 .checkmark {
-  height: 1rem;
-  width: 1rem;
-  background-color: #165764;
-  border: solid .1rem #022b3a;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #aa0000;
+  border: solid .3rem #3e363f;
   border-radius: .2rem;
+  box-sizing: border-box;
   position: absolute;
-  left: -.2rem;
+  transform: translateX(-100%);
   cursor: pointer;
 }
 .checkbox-hack:hover input ~ .checkmark {
-  background-color: #218397;
+  background-color: #f5d93a;
+}
+.checkbox-hack:hover input:checked ~ .checkmark {
+  background-color: #22c20c;
 }
 .checkbox-hack input:checked ~ .checkmark {
-  background-color: #28a0b8;
+  background-color: #26e20d;
 }
 .checkbox-hack input:checked ~ .checkmark:after {
   content:"";
   position: absolute;
   display: block;
-  left: .28rem;
-  height: .6rem;
-  width: .3rem;
+  left: 0.4rem;
+  bottom: .2rem;
+  height: 1.5rem;
+  width: .75rem;
   border: solid #fffce8;
-  border-width: 0 .2rem .2rem 0;
-  border-radius: .1rem;
+  border-width: 0 .4rem .4rem 0;
+  border-radius: .25rem;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .checkbox-hack input:disabled ~ .checkmark {
   background-color: #aaaaaa;
-}
-#global-settings > div {
-  max-width: 12rem;
-  margin-top: 1.5rem;
-  font-size: 1.75rem;
-  line-height: 1.25rem;
-  font-weight: bold;
-  color: #3e363f;
-}
-#global-settings legend {
-  margin-top: 1rem;
-  height: 2.2rem;
+  border-width: .15rem;
 }
 /* end of checkboxes */
-/* end of settings */
