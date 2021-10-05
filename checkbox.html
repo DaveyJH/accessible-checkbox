@@ -1,0 +1,12 @@
+<fieldset id="hidden-field-set">
+  <legend>Screen Reader Accessible Container Name</legend>
+  <div class="checkbox-hack">
+    <label for="checkbox-id">Individual checkbox label, displayed and read when checkbox focused</label>
+    <div>
+      <!-- standard checkbox styled in CSS -->
+      <input type="checkbox" id="checkbox-id" tabindex="-1">
+      <!-- custom checkbox styled in CSS -->
+      <span class="checkmark" tabindex="0" role="checkbox" aria-checked="false" aria-labelledby="checkbox-id"></span>
+    </div>
+  </div>
+</fieldset>
