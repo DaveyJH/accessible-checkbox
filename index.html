@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/checkbox.css">
+  <title>Checkbox Testing</title>
+</head>
+
+<body>
+  <fieldset id="hidden-field-set">
+    <legend>Screen Reader Accessible Container Name</legend>
+    <div class="checkbox-hack">
+      <label for="checkbox-id">Individual checkbox label, displayed and read when checkbox focused</label>
+      <div>
+        <!-- standard checkbox styled in CSS -->
+        <input type="checkbox" id="checkbox-id" tabindex="-1">
+        <!-- custom checkbox styled in CSS -->
+        <span class="checkmark" tabindex="0" role="checkbox" aria-checked="false" aria-labelledby="checkbox-id"></span>
+      </div>
+    </div>
+  </fieldset>
+  <script src="assets/js/checkbox.js"></script>
+</body>
+
+</html>
